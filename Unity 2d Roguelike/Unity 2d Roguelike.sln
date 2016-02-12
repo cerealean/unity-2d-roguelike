@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity 2d Roguelike.CSharp.Plugins", "Unity 2d Roguelike.CSharp.Plugins.csproj", "{6D0D1130-0FB9-A5DB-8CE2-1C7DFE697A77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity 2d Roguelike.CSharp", "Unity 2d Roguelike.CSharp.csproj", "{184BBF2A-FC8B-ACF0-529F-FF4F5F254715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity 2d Roguelike.CSharp.Editor", "Unity 2d Roguelike.CSharp.Editor.csproj", "{4E1648D6-958C-3A43-0BE9-807D8D521119}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D0D1130-0FB9-A5DB-8CE2-1C7DFE697A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0D1130-0FB9-A5DB-8CE2-1C7DFE697A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0D1130-0FB9-A5DB-8CE2-1C7DFE697A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0D1130-0FB9-A5DB-8CE2-1C7DFE697A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184BBF2A-FC8B-ACF0-529F-FF4F5F254715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184BBF2A-FC8B-ACF0-529F-FF4F5F254715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184BBF2A-FC8B-ACF0-529F-FF4F5F254715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184BBF2A-FC8B-ACF0-529F-FF4F5F254715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1648D6-958C-3A43-0BE9-807D8D521119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1648D6-958C-3A43-0BE9-807D8D521119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1648D6-958C-3A43-0BE9-807D8D521119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1648D6-958C-3A43-0BE9-807D8D521119}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
