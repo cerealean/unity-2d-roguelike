@@ -28,7 +28,40 @@ public class Player : MovingObject
 
     protected override void OnCantMove<T>(T component)
     {
-        throw new System.NotImplementedException();
+        Wall hitWall = component as Wall;
+        hitWall.DamageWall(WallDamage);
+        _animator.SetTrigger("PlayerChop");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Exit")
+        {
+            Invoke("Restart", RestartLevelDelay);
+            enabled = false;
+        }
+        else if (other.tag == "Food")
+        {
+            _food += PointsPerFood;
+            other.gameObject.SetActive(false);
+        }
+        else if (other.tag == "Soda")
+        {
+            _food += PointsPerSoda;
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    private void Restart()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void LoseFood(int loss)
+    {
+        _animator.SetTrigger("PlayerHit");
+        _food -= loss;
+        CheckIfGameOver();
     }
 
     protected override void AttemptMove<T>(int xDirection, int yDirection)
@@ -50,8 +83,19 @@ public class Player : MovingObject
 	    var horizontal = 0;
 	    var vertical = 0;
 
-	    horizontal = (int) Input;
-	}
+	    horizontal = (int) Input.GetAxisRaw("Horizontal");
+        vertical = (int)Input.GetAxisRaw("Vertical");
+
+	    if (horizontal != 0)
+	    {
+	        vertical = 0;
+	    }
+
+	    if (horizontal != 0 || vertical != 0)
+	    {
+	        AttemptMove<Wall>(horizontal,vertical);
+	    }
+    }
 
     private void CheckIfGameOver()
     {
